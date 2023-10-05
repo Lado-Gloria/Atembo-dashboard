@@ -9,7 +9,7 @@ export async function POST(request: Request) {
       });
     }
 
-    const body = await request.json();
+    const body = await request.json().then(response =>response);
 
     const result = await fetch(`${BASE_URL}/login/`, {
       method: "POST",
@@ -18,12 +18,12 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify(body),
     });
+ 
+    const user = await result.json();
 
-    const response = await result.json();
-
-    return new Response(JSON.stringify(response), {
-      status: result.status,
-      statusText: result.statusText,
+    return new Response(JSON.stringify(user), {
+      status: 201,
+      statusText: "success",
     });
   } catch (error: any) {
     return new Response(error.message, {

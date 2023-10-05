@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
 import {toast } from 'react-toastify';
-import useLogin from "../hooks/useGetlogin";
+import useLogin from "../hooks/usePosttlogin";
 import { useRouter } from "next/navigation";
 
 
@@ -25,10 +25,12 @@ function LoginPage() {
   const handleLoginUser = async (e: any) => {
     e.preventDefault();
     await handleLogin();
+    const loginSuccess =await handleLogin();
+  
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen bg-green-100">
       <form
         onSubmit={handleLoginUser}
         className="bg-white rounded px-8 pt-6 pb-8 mb-4"
@@ -82,15 +84,17 @@ function LoginPage() {
         {successMessage && (
           <div className="text-green-500 mb-4">{successMessage}</div>
         )}
-        <p>{user && Object.values(user)[0]}</p>
+        <p>{user && Object.values(user)[0] && user.token? 'Login succesful': Object.values(user)[0]}</p>
         <div className="flex items-center justify-between">
+        
           <button
             className="bg-green hover:bg-green text-white text-2xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
-            onClick={handleLoginUser}
+            onClick={handleLogin}
           >
             Log In
           </button>
+         
         </div>
         <div className="text-left font-semibold text-[20px] mt-4">
           Don't have an account?

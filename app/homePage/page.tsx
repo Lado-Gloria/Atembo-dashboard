@@ -15,8 +15,9 @@ const HomePage: React.FC = () => {
   if (loading) {
     return <p>Loading...</p>;
   }
-  const totalFlowrates = flowrate.length;
-  const totalDevices = flowrate.reduce((acc, curr) => acc + curr.device, 0);
+  const  totalDevices= flowrate.length;
+  const totalFlowrates = flowrate[flowrate.length - 1].device;
+  // const totalDevices = flowrate.reduce((acc, curr) => acc + curr.device, 0);
   const roundedAverageFlowrate = (
     flowrate.reduce((acc, curr) => acc + curr.flow_rate, 0) / totalFlowrates
   ).toFixed(1);

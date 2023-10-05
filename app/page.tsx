@@ -1,19 +1,44 @@
 "use client"
+import LandingPage from './landingpage/page';
+import React, { useEffect, useState } from 'react';
+import cookie from 'cookiejs';
 import RegistrationPage from './register/page';
 import 'tailwindcss/tailwind.css';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
-
-export default function Home() {
+const Home = () => {
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    const isLoggedIn = Boolean(cookie.get('LoginToken'));
+    setIsUserLoggedIn(isLoggedIn);
+    if (isLoggedIn) {
+      router.push('/homePage');
+    } else {
+      setTimeout(() => {
+        router.push('/register');
+      }, 5000);
+    }
+  }, [router]);
   return (
-    <main>
-      <div>
-        
-<RegistrationPage/>
-        
+    <main className="flex min-h-screen w-screen flex-col items-center gap-10 justify-center p-24 mytext bg-green-100">
+    <h1 className="font-bold text-6xl text-green">URBAN VERDE</h1>
+    <Image src="/images/Logo.png" className="w-[400px]" alt="logo" width={400} height={400} />
+  
+    <h1 className="text-3xl font-semibold mb-4">Welcome to Urban Verde Dashboard</h1>
+    <p className="text-green text-3xl mb-6">
+      Experience the ultimate dashboard for managing urban spaces and communities.
+    </p>
+  
+  
+      
+      <div className="flex  gap-3">
       </div>
     </main>
   );
-}
+};
+export default Home;
 
 
 

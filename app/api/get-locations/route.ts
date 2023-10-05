@@ -1,6 +1,7 @@
 import { BASE_URL } from "@/config";
 
 export async function GET() {
+    console.log({BASE_URL})
     try{
         if(!BASE_URL){
             return new Response('Base url not found', {
@@ -9,9 +10,9 @@ export async function GET() {
             })
         }
         const response=await fetch(`${BASE_URL}/locations/`)
+        console.log('Response:', response)
         const result=await response.json();
        
-        
         return new Response(JSON.stringify(result),{
             status:200,
             statusText:'Success'

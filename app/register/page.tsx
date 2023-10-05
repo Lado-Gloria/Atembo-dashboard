@@ -78,7 +78,7 @@ const RegistrationPage = () => {
 
 
 return (
-<div className="flex justify-center items-center h-screen bg-white">
+<div className="flex justify-center items-center h-screen bg-green-100">
 <ToastContainer />
 <div className="bg-white rounded px-8 pt-6 pb-8 mb-4 shadow-[0 2px 4px rgba(0, 0, 0, 0.4)]">
 <h1 className="text-green text-4xl mb-4 font-bold">REGISTER TO DASHBOARD</h1>

@@ -1,27 +1,25 @@
 
-
-
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { loginUser } from '../Utilities/utils';
+import cookie from 'cookiejs';
 
 interface LoginData {
   username: string;
   password: string;
 }
 
-const useLogin = (loginData: LoginData) => {
+const useLogin = (initialLoginData: LoginData) => {
   const router = useRouter();
-  const [user, setUser] = useState();
+  const [user, setUser] = useState({token: ''});
 
     const handleLogin = async () => {
-      const response = await loginUser(loginData);
-      console.log(response)
-    
-      if (response && response.message === 'Logged in successfully') {
+      const response = await loginUser(initialLoginData.username, initialLoginData.password);
+      if (response.token) {
+        cookie.set('loginToken',response.token)
         router.replace('/homePage');
       } else {
-        router.push('/login');
+        router.push('/homePage');
       }
     
     setUser(response);
