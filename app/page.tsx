@@ -1,8 +1,6 @@
 "use client"
-import LandingPage from './landingpage/page';
 import React, { useEffect, useState } from 'react';
 import cookie from 'cookiejs';
-import RegistrationPage from './register/page';
 import 'tailwindcss/tailwind.css';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
