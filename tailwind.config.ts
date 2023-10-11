@@ -4,6 +4,7 @@ const config: Config = {
     './components/**/*.{tsx}',
     './app/**/*.{ts,tsx}',
   ],
+
   theme: {
     screens: {
       xs: '280px',
@@ -29,8 +30,34 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      backgroundImage: {
+        homescreen: 'url("/images/farm.jpg")',
+      },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+      },
+      backgroundPosition: {
+        'center': 'center',
+        'top': 'top',
+        'right': 'right',
+        'bottom': 'bottom',
+        'left': 'left',
+      },
+      backgroundRepeat: {
+        'repeat': 'repeat',
+        'no-repeat': 'no-repeat',
+        'repeat-x': 'repeat-x',
+        'repeat-y': 'repeat-y',
+      },
+      dark: {
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10))',
+      },
+
   },
   },
   plugins: [],
 };;;
 export default config;
+
