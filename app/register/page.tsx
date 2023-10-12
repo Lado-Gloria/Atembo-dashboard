@@ -78,12 +78,12 @@ const RegistrationPage = () => {
 
 
 return (
-<div className="flex justify-center items-center h-screen bg-green-100">
+<div className="flex justify-center items-center bg-no-repeat bg-cover h-screen w-screen bg-frame bg-opacity-70">
 <ToastContainer />
-<div className="bg-white rounded px-8 pt-6 pb-8 mb-4 shadow-[0 2px 4px rgba(0, 0, 0, 0.4)]">
+<div className="bg-white bg-opacity-80 rounded px-20 pt-10 pb-20 mb-4 shadow-[0 2px 4px rgba(0, 0, 0, 0.4)] " style={{ marginLeft: "800px" }}>
 <h1 className="text-green text-4xl mb-4 font-bold">REGISTER TO DASHBOARD</h1>
 <form onSubmit={handleCreateUser}>
-<div className="mb-4">
+<div className="mb-4" >
 <label className="block text-black mt-4 text-2xl mb-2" htmlFor="firstName">
 First Name
 </label>

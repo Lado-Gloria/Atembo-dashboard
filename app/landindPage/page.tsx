@@ -2,7 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 const HomeScreen = () => {
   return (
-    <div className="bg-homescreen bg-no-repeat bg-cover h-screen w-screen text-white ">
+    <div className="bg-homescreen bg-no-repeat bg-cover h-screen w-screen text-white opacity-80">
+      
       <img src="/images/Logo.png" alt="logo" className="float-left mt-10 mr-10 w-32" />
       <div className="flex flex-col justify-center items-center w-screen">
         <div className="text-center mt-20">
