@@ -2,34 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
-body {
-  margin: 0px;
-  line-height: normal;
-  padding: 0px;
-}
-:root {
-  --font-ubuntu: Ubuntu;
-  --font-inter: Inter;
-
-  --font-size-sm: 14px;
-  --font-size-base: 16px;
-  --font-size-xs: 12px;
-  --font-size-13xl: 32px;
-  --font-size-mini: 15px;
-
-  --color-white: #fff;
-  --color-black: #000;
-  --color-limegreen: #2cb908;
-  --color-gainsboro-100: #d9d9d9;
-  --color-dimgray: #756767;
-  --color-gray: #8a6f6f;
-  --color-darkgreen: #156700;
-
-  --br-8xs: 5px;
-  --br-3xs: 10px;
- */
 
   
+@media screen and (min-width: 768px) {
+  .text-gray {
+    font-size: 4rem;
+  }
+  .text-xl {
+    font-size: 1.5rem;
+  }
+  .px-16 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .py-4 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .md\:px-16 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .md\:py-4 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* Media query for Nest Hub Max */
+@media screen and (min-width: 1280px) {
+  .text-gray {
+    font-size: 6rem;
+  }
+  .text-xl {
+    font-size: 2rem;
+  }
+  .px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* Add more styles specific to Nest Hub Max if needed */
+}
+
+/* global.css */
+
+/* Your existing global styles */
+
+/* Media query for small screens (phones) */
+@media screen and (max-width: 767px) {
+  /* Adjust styles for small screens here */
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Media query for medium-sized screens (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust styles for tablets here */
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* Media query for large screens (desktops) */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* Adjust styles for large screens here */
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Media query for Nest Hub Max and other extra-large screens */
+@media screen and (min-width: 1280px) {
+  /* Adjust styles for Nest Hub Max and similar screens here */
+  .container {
+    max-width: 1200px;
+  }
+
+  .sidebar {
+    width: 300px;
+  }
+
+  .main-content {
+    margin-left: 320px;
+  }
+
+  /* Add more styles specific to Nest Hub Max if needed */
+  /* Example styles for Nest Hub Max */
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+
+  /* Additional styles specific to Nest Hub Max */
+  .special-element {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6600;
+  }
+
+  /* Add more Nest Hub Max specific styles as needed */
+}
 

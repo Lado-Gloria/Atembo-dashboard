@@ -32,7 +32,7 @@ const config: Config = {
       },
       backgroundImage: {
         homescreen: 'url("/images/farm.jpg")',
-        frame:'url("/images/Frame.png")',
+        frame:'url("/images/Framemain.png")',
       },
       backgroundSize: {
         'auto': 'auto',
