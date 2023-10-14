@@ -29,7 +29,6 @@
   }
 }
 
-/* Media query for Nest Hub Max */
 @media screen and (min-width: 1280px) {
   .text-gray {
     font-size: 6rem;
@@ -54,40 +53,39 @@
     padding-bottom: 1rem;
   }
 
-  /* Add more styles specific to Nest Hub Max if needed */
+
 }
 
-/* global.css */
 
-/* Your existing global styles */
-
-/* Media query for small screens (phones) */
 @media screen and (max-width: 767px) {
-  /* Adjust styles for small screens here */
+
   .container {
     padding: 10px;
   }
 }
 
-/* Media query for medium-sized screens (tablets) */
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Adjust styles for tablets here */
+
   .container {
     max-width: 768px;
   }
 }
 
-/* Media query for large screens (desktops) */
+
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
-  /* Adjust styles for large screens here */
+ 
   .container {
     max-width: 960px;
   }
+  .sidebar {
+    width: 300px;
+  }
+
 }
 
-/* Media query for Nest Hub Max and other extra-large screens */
 @media screen and (min-width: 1280px) {
-  /* Adjust styles for Nest Hub Max and similar screens here */
+ 
   .container {
     max-width: 1200px;
   }
@@ -100,8 +98,6 @@
     margin-left: 320px;
   }
 
-  /* Add more styles specific to Nest Hub Max if needed */
-  /* Example styles for Nest Hub Max */
   .header {
     background-color: #333;
     color: #fff;
@@ -114,13 +110,71 @@
     padding: 20px;
   }
 
-  /* Additional styles specific to Nest Hub Max */
   .special-element {
     font-size: 24px;
     font-weight: bold;
     color: #ff6600;
   }
 
-  /* Add more Nest Hub Max specific styles as needed */
+  @media (min-width: 768px) {
+    .login-form {
+      max-width: 800px;
+      margin: 0 auto;
+      margin-left: 50px; 
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .login-form {
+      max-width: 1200px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .form {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  }
+}
+@layer screens {
+  @media screen and (min-width: 768px) {
+    .login-form {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .login-form {
+      max-width: 1200px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .form {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .bg-white {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-left: 50px; 
+  }
 }
 
+@media (min-width: 1024px) {
+  .bg-white {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bg-white {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}

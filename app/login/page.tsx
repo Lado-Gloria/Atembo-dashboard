@@ -30,10 +30,11 @@ function LoginPage() {
   };
 
   return (
-    <div className="flex items-center bg-no-repeat bg-cover h-screen w-screen bg-frame bg-opacity-70 ">
+    <div className="flex items-center bg-no-repeat bg-cover min-h-screen w-screen bg-frame bg-opacity-70 ">
       <form
         onSubmit={handleLoginUser}
         className="bg-white bg-opacity-30  rounded px-20 pt-10 pb-20 mb-4 "style={{ marginLeft: "900px" }} >
+          
         <h1 className="text-green text-4xl mb-8 font-bold">LOGIN TO DASHBOARD</h1>
         <div className="mb-4">
           <label className="block text-black text-2xl mb-4" htmlFor="username">
