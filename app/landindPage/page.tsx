@@ -5,7 +5,7 @@ import React from 'react';
 const HomeScreen = () => {
   return (
     <div className="bg-homescreen bg-no-repeat bg-cover h-screen w-screen text-white opacity-80">
-      <style jsx>{`
+      <style>{`
         @media (min-width: 768px) {
           .text-gray {
             font-size: 4rem;
