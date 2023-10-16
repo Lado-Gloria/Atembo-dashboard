@@ -5,40 +5,15 @@ import React from 'react';
 const HomeScreen = () => {
   return (
     <div className="bg-homescreen bg-no-repeat bg-cover h-screen w-screen text-white opacity-80">
-      <style>{`
-        @media (min-width: 768px) {
-          .text-gray {
-            font-size: 4rem;
-          }
-          .text-xl {
-            font-size: 3rem;
-          }
-          .px-16 {
-            padding-left: 4rem;
-            padding-right: 4rem;
-          }
-          .py-4 {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-          }
-          .md\:px-16 {
-            padding-left: 4rem;
-            padding-right: 4rem;
-          }
-          .md\:py-4 {
-            padding-top: rem;
-            padding-bottom: 1rem;
-          }
-        }
-      `}</style>
+      
       <img src="/images/Logo.png" alt="logo" className="float-left mt-10 mr-10 w-32" />
       <div className="flex flex-col justify-center items-center w-screen">
         <div className="text-center mt-20">
-          <h1 className="font-bold text-4xl pb-4 text-gray">WELCOME TO URBAN VERDE</h1>
-          <h1 className="font-bold text-4xl">
+          <h1 className="font-bold text-6xl pb-4 text-gray">WELCOME TO URBAN VERDE</h1>
+          <h1 className="font-bold mt-20 text-5xl">
             Fighting food insecurity in urban areas
           </h1>
-          <h1 className="font-bold text-4xl mt-2">
+          <h1 className="font-bold text-5xl mt-2">
             and ensuring sustainability
           </h1>
           <h2 className="mt-4 text-xl font-bold">
